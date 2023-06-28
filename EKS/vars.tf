@@ -10,7 +10,7 @@ variable "vpc_id" {
 
 variable "vpn_ip_whitelist" {
   description = "IP whitelist for VPN access"
-  type        = string
+  type        = list(string)
 }
 
 variable "subnet_ids" {
