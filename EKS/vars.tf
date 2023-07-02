@@ -10,7 +10,7 @@ variable "vpc_id" {
 
 variable "vpn_ip_whitelist" {
   description = "IP whitelist for VPN access"
-  type        = list(string)
+  type        = string
 }
 
 variable "subnet_ids" {
@@ -71,8 +71,8 @@ variable "eks_node_group_name" {
 }
 
 variable "cluster_endpoint_whitelist" {
-  description = "List of CIDR blocks for cluster endpoint whitelist"
-  type        = list(string)
+  description = "whether want to whitelist cluster endpoint"
+  type        =  bool
 }
 
 variable "create_node_group" {
@@ -118,7 +118,7 @@ variable "ssh_key" {
 
 variable "instance_type" {
   description = "Instance type for node instances"
-  type        = string
+  type        = list(string)
 }
 
 variable "desired_capacity" {
