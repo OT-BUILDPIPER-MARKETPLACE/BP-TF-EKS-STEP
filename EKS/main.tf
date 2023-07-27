@@ -56,6 +56,7 @@ module "valuefy_eks_cluster" {
       ssh_key            = var.ssh_key
       security_group_ids = [module.eks_internal_ssh_security_group.sg_id]
       instance_type      = var.instance_type
+      ami_type           = var.ami_type
       desired_capacity   = var.desired_capacity
       disk_size          = var.disk_size
       max_capacity       = var.max_capacity
