@@ -160,3 +160,7 @@ variable "slackUrl" {
   description = "Slack URL for notifications"
   type        = string
 }
+variable "ami_type" {
+  description = "Type of Amazon Machine Image (AMI) associated with the EKS Node Group"
+  type        = string
+}
